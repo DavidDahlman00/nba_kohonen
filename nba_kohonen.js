@@ -20,7 +20,10 @@ let grafGridDiv = document.getElementById('graf_grid')
 let gridSizeButtons = document.getElementsByClassName('grid_button')
 gridSizeButtons[1].style.background = 'green'
 let gridSizeList = [false, true, false]
-
+let years = document.getElementsByClassName('yearButton')
+years[0].style.background = 'blue'
+let yearList = [true, false, false]
+let year = 2018
 let colorList = [ "DarkGoldenRod",
 "Blue",
 "BlueViolet",
@@ -33,6 +36,11 @@ let colorList = [ "DarkGoldenRod",
 
 for (let index = 0; index < gridSizeButtons.length; index++) {
     gridSizeButtons[index].addEventListener('click', setGridSize)
+    
+}
+
+for (let index = 0; index < years.length; index++) {
+    years[index].addEventListener('click', setYear)
     
 }
 
@@ -59,7 +67,40 @@ function setGridSize() {
 
     }
     console.log(gridSizeList)
+}
 
+function setYear() {
+    if(this.innerHTML == 2018){
+        if(!yearList[0]) {
+            for (let index = 0; index < yearList.length; index++) {
+                yearList[index] = false
+                years[index].style.background = 'cadetblue'
+            }
+            yearList[0] = true
+            years[0].style.background = 'blue'
+            year = 2018
+        }
+    }else if(this.innerHTML == 2019){
+        if(!yearList[1]) {
+            for (let index = 0; index < yearList.length; index++) {
+                yearList[index] = false
+                years[index].style.background = 'cadetblue'
+            }
+            yearList[1] = true
+            years[1].style.background = 'blue'
+            year = 2019
+        }
+    }else if(this.innerHTML == 2020){
+        if(!yearList[2]) {
+            for (let index = 0; index < yearList.length; index++) {
+                yearList[index] = false
+                years[index].style.background = 'cadetblue'
+            }
+            yearList[2] = true
+            years[2].style.background = 'blue'
+            year = 2020
+        }
+    }
 }
 
 // function displayGrid(gridList){
@@ -92,8 +133,8 @@ function createDisplayGrid(n, m){
 createDisplayGrid(2, 3)
 const apiUrl = 'https://www.balldontlie.io/api/v1/season_averages?season=2018&player_ids[]=140'
 
-const statsUrl = 'https://www.balldontlie.io/api/v1/season_averages?season=2018&player_ids[]='
-
+const statsUrlstart = 'https://www.balldontlie.io/api/v1/season_averages?season='
+const statsUrlmidel = '&player_ids[]='
 const playerUrl = 'https://www.balldontlie.io/api/v1/players/?search='
 
 let add_button = document.querySelector('#add')
@@ -265,7 +306,7 @@ function addTableHeader() {
     async function addStats(id, player) {
         let stats_matrix = []
         console.log('started stats')
-        const url = statsUrl + id 
+        const url = statsUrlstart + year + statsUrlmidel + id 
         console.log(url)
         const response = await fetch(url)
         
