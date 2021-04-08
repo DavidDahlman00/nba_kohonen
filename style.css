@@ -1,0 +1,130 @@
+body {
+    display: grid;
+    grid-template-rows: 5rem 1fr 5rem;
+}
+
+#inner_body {
+    display: grid;
+    grid-template-columns: 5rem 1fr 5rem;
+}
+
+main {
+    background: whitesmoke;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 4px cadetblue;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+   
+
+}
+
+#graf_info {
+    display: grid;
+    grid-template-columns: 1fr 8rem;
+}
+
+#info {
+    margin: 2%;
+}
+
+
+
+
+#table_button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#left {
+    /* background-color: whitesmoke; */
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 3rem 1fr 3rem;
+   
+}
+
+div {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#top_margin {
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 3%;
+    margin-bottom: 0%;
+}
+
+#right {
+    /* background-color: whitesmoke; */
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 3rem  1fr 3rem;
+    padding-top: 10%;
+    padding-left: 5%;
+}
+
+#activity_frame {
+    
+}
+
+#activity_frame > button {
+    font-size: 8;
+    background-color: orange;
+    color: papayawhip;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+#activity_frame > .yearButton {
+    font-size: 8;
+    background-color: cadetblue;
+    color: papayawhip;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+#table_frame {
+    
+    height: 90%;
+    width: 90%;
+    margin: 5%;
+}
+
+#add_remove {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#graf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.grid_node {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid darkgrey;
+    border-radius: 50rem;
+    box-shadow:  2px 2px 4px cadetblue;
+    margin: 1rem;
+}
+
+.name {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.stat {
+    border: 1px solid black;
+    text-align: center;
+}
+

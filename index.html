@@ -9,7 +9,82 @@
 
 </head>
 <body>
-    <main></main>
+    <div id="top_margin">NBA data with Kohonen graphs</div>
+    <div id="inner_body">
+        <div id="left_margin"></div>
+        <main>
+            <div id="graf_info">
+                <div id="graf">
+                    <!-- <span class="hex"></span>
+                    <div><span class="hex"></span><span class="hex"></span></div>
+                    <div><span class="hex"></span><span class="hex"></span><span class="hex"></span></div>
+                    <div><span class="hex"></span><span class="hex"></span></div> -->
+                    <div id="graf_grid"></div>
+                    <div id="graf_table"><button id="s2x2" class="grid_button">2x2</button><button id="s2x3" class="grid_button">2x3</button><button id="s3x3" class="grid_button">3x3</button></div>
+                </div>
+                <div id="info">
+                    Links to pages on Kohonen graphs.
+                    <a href="https://en.wikipedia.org/wiki/Self-organizing_map"><div class="links">wikipedia</div></a>
+                     
+                    <a href="https://clarkdatalabs.github.io/soms/SOM_NBA#supervised_soms"><div class="links">nba self organizing grafs in R</div></a>
+                     
+                    <a href="https://sci2s.ugr.es/keel/pdf/algorithm/articulo/1990-Kohonen-PIEEE.pdf"><div class="links">self organizing maps explained by Teuvo Kohonen 1990</div></a>
+                </div>
+            </div>
+            <div id="table_button">
+                <div id="left">
+                    <div></div>
+                    <div id="table_frame">
+                        <table id="table1">
+
+                        </table>
+                    <div></div>
+                    </div>
+                </div>  
+               
+                <div id="right">
+                    <div id="add/remove">
+                        <input type="text" id="textfield" name="enterName">
+                        <button id="add">Generate graf</button>
+                        <button id="clear">clear list</button>
+                    </div>
+                    <div id="activity_frame">
+                        <button id="year2018" class="yearButton">2018</button>
+                        <button id="year2019" class="yearButton">2019</button>
+                        <button id="year2020" class="yearButton">2020</button><br>
+                        <!-- <button id="min" class="button">min</button> -->
+                        <button id="fgm" class="button">fgm</button>
+                        <button id="fga" class="button">fga</button>
+                        <button id="fg3m" class="button">fg3m</button>
+                        <button id="fg3a" class="button">fg3a</button>
+                        <button id="ftm" class="button">ftm</button>
+                        <button id="fta" class="button">fta</button>
+                        <button id="oreb" class="button">oreb</button>
+                        <button id="dreb" class="button">dreb</button>
+                        <button id="reb" class="button">reb</button>
+                        <button id="ast" class="button">ast</button>
+                        <button id="stl" class="button">stl</button>
+                        <button id="blk" class="button">blk</button>
+                        <button id="turnover" class="button">turnover</button>
+                        <button id="pf" class="button">pf</button>
+                        <button id="pts" class="button">pts</button>
+                        <button id="fg_pct" class="button">fg%</button>
+                        <button id="fg3_pct" class="button">fg3%</button>
+                        <button id="ft_pct" class="button">ft%</button>    
+                    </div>
+                    <div id="test">0</div>
+                </div>
+            </div>
+
+            <div>
+    
+            </div>
+        </main>
+        <div id="right_margin"></div>
+    </div>
+    <div id="botton_margin"></div>
+    
+    
 </body>
 <script src="nba_kohonen.js"></script>
 </html>
