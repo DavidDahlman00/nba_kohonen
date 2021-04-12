@@ -1,5 +1,5 @@
 // ***************INIT********************************************
-
+const { PCA } = require('ml-pca');
 let stats_lenght = 0
 let matrix = []
 let colMean = []
@@ -442,8 +442,10 @@ function addTableHeader() {
     }
 
     function initGrid(n, m, stdVector){
-        let v1 = []
-        let v2 = []
+        const  pca = new PCA(matrixScaled)
+        const eigenVectors = pca.getEigenvectors()
+        let v1 = eigenVectors.getRow(0)
+        let v2 = eigenVectors.getRow(1)
         for (let i = 0; i < matrix[0].length; i++) {
             if(i % 2 == 0){
                 v1.push(0.5)

@@ -1,0 +1,22 @@
+{
+  "name": "nba_kohonen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nba_kohonen.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidDahlman00/nba_kohonen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidDahlman00/nba_kohonen/issues"
+  },
+  "homepage": "https://github.com/DavidDahlman00/nba_kohonen#readme",
+  "dependencies": {
+    "ml-pca": "^4.0.1"
+  }
+}
